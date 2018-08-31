@@ -44,13 +44,13 @@ spec:
         args: [
           "--http_port=8081",
           "--backend=127.0.0.1:8080",
-          "--service=SERVICE_NAME",
+          "--service=echo-api.endpoints.test-1-179209.cloud.goog",
           "--rollout_strategy=managed",
         ]
       # [END esp]
         ports:
         - containerPort: 8081
       - name: echo
-        image: gcr.io/google-samples/echo-python:1.0
+        image: gcr.io/test-1-179209/k8endpoint@sha256:ad90483d058e93ba0bf6ae7b70c3592bde859dd2db63781d05a3a005e36c73ea
         ports:
         - containerPort: 8080
